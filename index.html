@@ -14,135 +14,240 @@
 }
 
 body{
-  background:#f7f7fb;
+  background:#f6f7fb;
   color:#222;
 }
 
 header{
-  background:linear-gradient(135deg,#ff6b35,#ff3d81);
+  background:linear-gradient(135deg,#ff416c,#ff8a00);
   color:white;
-  padding:22px 18px 28px;
-  border-radius:0 0 25px 25px;
+  padding:24px 16px;
+  border-radius:0 0 28px 28px;
 }
 
 .logo{
   font-size:30px;
-  font-weight:800;
-}
-
-.tagline{
-  margin-top:5px;
-  opacity:.9;
-  font-size:14px;
-}
-
-.search{
-  margin-top:18px;
-  background:white;
-  border-radius:14px;
-  padding:13px 15px;
-  color:#888;
-}
-
-.categories{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-  padding:18px 14px;
-}
-
-.category{
-  background:white;
-  border-radius:16px;
-  padding:15px 5px;
-  text-align:center;
-  box-shadow:0 3px 12px rgba(0,0,0,.07);
-  cursor:pointer;
-  transition:.2s;
-}
-
-.category:active{
-  transform:scale(.95);
-}
-
-.icon{
-  font-size:27px;
-  display:block;
-  margin-bottom:7px;
-}
-
-.category span:last-child{
-  font-size:13px;
-  font-weight:600;
-}
-
-.title{
-  padding:5px 16px 12px;
-  font-size:21px;
-  font-weight:700;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-  padding:0 14px 30px;
-}
-
-.card{
-  background:white;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 3px 14px rgba(0,0,0,.08);
-}
-
-.preview{
-  height:170px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:15px;
-  color:white;
-  font-size:19px;
   font-weight:bold;
 }
 
-.morning{
-  background:linear-gradient(135deg,#ffb347,#ffcc33);
-}
-
-.night{
-  background:linear-gradient(135deg,#312e81,#111827);
-}
-
-.bhakti{
-  background:linear-gradient(135deg,#ff512f,#dd2476);
-}
-
-.festival{
-  background:linear-gradient(135deg,#7c3aed,#ec4899);
-}
-
-.card-content{
-  padding:12px;
-}
-
-.card-content h3{
+.subtitle{
+  margin-top:5px;
   font-size:15px;
+}
+
+.search{
+  width:100%;
+  padding:15px 18px;
+  border:0;
+  border-radius:30px;
+  margin-top:18px;
+  font-size:16px;
+  outline:none;
+}
+
+.categories{
+  display:flex;
+  gap:9px;
+  overflow-x:auto;
+  padding:15px 12px;
+  background:white;
+  position:sticky;
+  top:0;
+  z-index:20;
+  box-shadow:0 2px 10px #00000015;
+}
+
+.categories::-webkit-scrollbar{
+  display:none;
+}
+
+.cat{
+  white-space:nowrap;
+  border:0;
+  background:#f0f1f5;
+  padding:11px 16px;
+  border-radius:22px;
+  font-size:14px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.cat.active{
+  background:#ff416c;
+  color:white;
+}
+
+.container{
+  padding:18px 14px 50px;
+}
+
+.title{
+  font-size:24px;
+  margin:5px 0 15px;
+}
+
+.day-info{
+  background:white;
+  padding:14px;
+  border-radius:16px;
+  margin-bottom:16px;
+  box-shadow:0 3px 12px #0000000d;
+}
+
+.video-card{
+  background:white;
+  border-radius:22px;
+  overflow:hidden;
+  margin-bottom:22px;
+  box-shadow:0 4px 18px #00000012;
+}
+
+.preview{
+  min-height:300px;
+  padding:25px 18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  position:relative;
+}
+
+.preview h2{
+  font-size:28px;
+  margin:15px 0;
+  line-height:1.35;
+}
+
+.preview p{
+  font-size:16px;
+}
+
+.profile{
+  position:absolute;
+  left:18px;
+  bottom:15px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.profile img{
+  width:58px;
+  height:58px;
+  object-fit:cover;
+  border-radius:50%;
+  border:3px solid white;
+  background:white;
+}
+
+.profile-name{
+  font-weight:bold;
+  font-size:17px;
+  text-shadow:0 1px 4px #000;
+}
+
+.card-body{
+  padding:15px;
+}
+
+.card-title{
+  font-size:20px;
+  font-weight:bold;
   margin-bottom:5px;
 }
 
-.card-content p{
+.card-desc{
   color:#777;
-  font-size:12px;
+  margin-bottom:13px;
 }
 
-footer{
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+button{
+  cursor:pointer;
+}
+
+.watch{
+  width:100%;
+  border:0;
+  background:#ff1744;
+  color:white;
+  padding:13px;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:bold;
+}
+
+.share{
+  flex:1;
+  min-width:100px;
+  border:0;
+  padding:10px;
+  border-radius:10px;
+  background:#f0f1f5;
+  font-weight:bold;
+}
+
+.profile-box{
+  background:white;
+  padding:18px;
+  border-radius:18px;
+  margin-bottom:20px;
+  box-shadow:0 3px 14px #00000010;
+}
+
+.profile-box h3{
+  margin-bottom:12px;
+}
+
+.profile-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+
+.profile-row img{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.input{
+  width:100%;
+  padding:11px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+.save{
+  width:100%;
+  padding:12px;
+  border:0;
+  border-radius:10px;
+  background:#ff416c;
+  color:white;
+  font-weight:bold;
+}
+
+.hidden{
+  display:none;
+}
+
+.empty{
+  background:white;
+  padding:30px;
+  border-radius:18px;
   text-align:center;
-  padding:20px;
-  color:#888;
-  font-size:12px;
+  color:#777;
 }
 </style>
 </head>
@@ -151,225 +256,504 @@ footer{
 
 <header>
   <div class="logo">RozBolo</div>
-  <div class="tagline">Daily Status & Videos</div>
-
-  <div class="search">
-    🔍 Search status, bhakti, festival...
-  </div>
+  <div class="subtitle">Daily Status & Videos ❤️</div>
+  <input
+    id="search"
+    class="search"
+    type="search"
+    placeholder="🔎 Good Morning, Bhakti, Birthday..."
+    oninput="searchVideos()">
 </header>
 
-<section class="categories">
-
-  <div class="category" onclick="showMessage('Good Morning')">
-    <span class="icon">🌅</span>
-    <span>Good Morning</span>
-  </div>
-
-  <div class="category" onclick="showMessage('Good Night')">
-    <span class="icon">🌙</span>
-    <span>Good Night</span>
-  </div>
-
-  <div class="category" onclick="showMessage('Bhakti')">
-    <span class="icon">🙏</span>
-    <span>Bhakti</span>
-  </div>
-
-  <div class="category" onclick="showMessage('Festival')">
-    <span class="icon">🎉</span>
-    <span>Festival</span>
-  </div>
-
-  <div class="category" onclick="showMessage('Suvichar')">
-    <span class="icon">💭</span>
-    <span>Suvichar</span>
-  </div>
-
-  <div class="category" onclick="showMessage('Birthday')">
-    <span class="icon">🎂</span>
-    <span>Birthday</span>
-  </div>
-
-</section>
-
-<div class="title">✨ Today's Status</div>
-
-<section class="cards">
-<div class="card" onclick="openStatus('Good Morning','शुभ प्रभात आपका दिन शुभ हो')">
-
-    <div class="preview morning">
-      🌅<br>
-      शुभ प्रभात<br>
-      आपका दिन शुभ हो
-    </div>
-    <div class="card-content">
-      <h3>Good Morning</h3>
-      <p>सुंदर सुबह की शुभकामना</p>
-    </div>
-  </div>
-
-  <div class="card" onclick="openStatus('Good Night','शुभ रात्री मीठे सपने')">
-    <div class="preview night">
-      🌙<br>
-      शुभ रात्रि<br>
-      मीठे सपने
-    </div>
-    <div class="card-content">
-      <h3>Good Night</h3>
-      <p>अपनों को भेजें शुभ रात्रि</p>
-    </div>
-  </div>
-
-  <div class="card" onclick="openStatus('Bhakti','जय श्री राम शुभ दिन')">
-    <div class="preview bhakti">
-      🙏<br>
-      जय श्री राम<br>
-      शुभ दिन
-    </div>
-    <div class="card-content">
-      <h3>Bhakti</h3>
-      <p>भक्ति और आस्था के status</p>
-    </div>
-  </div>
-
-  <div class="card" onclick="openStatus('Festival','शुभकामनाएँ खुशियाँ बाँटे')">
-    <div class="preview festival">
-      🎉<br>
-      शुभकामनाएँ<br>
-      खुशियाँ बाँटें
-    </div>
-    <div class="card-content">
-      <h3>Festival</h3>
-      <p>त्योहारों के सुंदर status</p>
-    </div>
-  </div>
-
-</section>
-
-<footer>
-  © 2026 RozBolo • Daily Status & Videos
-</footer>
-
-<script>
-function showMessage(name){
-  alert(name + " category जल्द उपलब्ध होगी ❤️");
-}
-</script>
-<div style="padding:20px 14px;text-align:center;">
-  <h3>📤 Share RozBolo</h3>
-
-  <button onclick="shareWhatsApp()" style="padding:12px;margin:4px;border:0;border-radius:10px;background:#25D366;color:white;">
-    WhatsApp
-  </button>
-
-  <button onclick="shareFacebook()" style="padding:12px;margin:4px;border:0;border-radius:10px;background:#1877F2;color:white;">
-    Facebook
-  </button>
-
-  <button onclick="shareInstagram()" style="padding:12px;margin:4px;border:0;border-radius:10px;background:#E1306C;color:white;">
-    Instagram
-  </button>
-
-  <button onclick="shareRozBolo()" style="padding:12px;margin:4px;border:0;border-radius:10px;background:#333;color:white;">
-    📤 Share
-  </button>
+<div class="categories">
+  <button class="cat active" onclick="setCategory('All',this)">All</button>
+  <button class="cat" onclick="setCategory('Good Morning',this)">🌅 Good Morning</button>
+  <button class="cat" onclick="setCategory('Good Night',this)">🌙 Good Night</button>
+  <button class="cat" onclick="setCategory('Devotional',this)">🙏 Devotional</button>
+  <button class="cat" onclick="setCategory('Suvichar',this)">💭 Suvichar</button>
+  <button class="cat" onclick="setCategory('Birthday',this)">🎂 Birthday</button>
+  <button class="cat" onclick="setCategory('Anniversary',this)">💍 Anniversary</button>
+  <button class="cat" onclick="setCategory('Festival',this)">🪔 Festival</button>
 </div>
 
+<main class="container">
+
+  <div class="day-info">
+    📅 <b id="today"></b><br>
+    🙏 आज की विशेष भक्ति: <b id="dayBhakti"></b>
+  </div>
+
+  <div class="profile-box">
+    <h3>👤 मेरी Profile</h3>
+
+    <div class="profile-row">
+      <img id="profilePreview"
+           src="https://i.pravatar.cc/150?img=12"
+           alt="Profile">
+
+      <div>
+        <b id="profileNamePreview">RozBolo User</b><br>
+        <small>यह नाम और फोटो वीडियो पर अपने-आप दिखेगा</small>
+      </div>
+    </div>
+
+    <input id="nameInput"
+           class="input"
+           placeholder="अपना नाम लिखें">
+
+    <input id="photoInput"
+           class="input"
+           type="file"
+           accept="image/*">
+
+    <button class="save" onclick="saveProfile()">
+      Profile Save करें
+    </button>
+  </div>
+
+  <h1 class="title">आज के Status & Videos</h1>
+
+  <div id="videoList"></div>
+
+</main>
+
 <script>
-function shareWhatsApp(){
-  const text = "RozBolo - Daily Status & Videos";
-  const url = "https://milo-122324.github.io/rozbolo/";
-  window.open("https://wa.me/?text=" + encodeURIComponent(text + "\n" + url), "_blank");
+
+const defaultPhoto =
+"https://i.pravatar.cc/150?img=12";
+
+let profile = {
+  name:localStorage.getItem("rozboloName") || "RozBolo User",
+  photo:localStorage.getItem("rozboloPhoto") || defaultPhoto
+};
+
+let currentCategory = "All";
+
+const dayNames = [
+  "रविवार",
+  "सोमवार",
+  "मंगलवार",
+  "बुधवार",
+  "गुरुवार",
+  "शुक्रवार",
+  "शनिवार"
+];
+
+const bhakti = [
+  "सूर्य देव",
+  "शिव जी",
+  "हनुमान जी",
+  "गणेश जी",
+  "विष्णु जी / श्री कृष्ण",
+  "माता लक्ष्मी",
+  "शनि देव / हनुमान जी"
+];
+
+function getToday(){
+  const d = new Date();
+
+  document.getElementById("today").innerText =
+    d.toLocaleDateString("hi-IN",{
+      weekday:"long",
+      day:"numeric",
+      month:"long",
+      year:"numeric"
+    });
+
+  document.getElementById("dayBhakti").innerText =
+    bhakti[d.getDay()];
+}
+
+function festivalToday(){
+
+  const d = new Date();
+  const key =
+    d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+
+  const festivals = {
+
+    "2026-10-6":
+      "🙏 इंदिरा एकादशी",
+
+    "2026-10-11":
+      "🌺 शारदीय नवरात्रि आरंभ",
+
+    "2026-10-16":
+      "📚 सरस्वती आवाहन",
+
+    "2026-10-17":
+      "📚 सरस्वती पूजा",
+
+    "2026-10-19":
+      "🌺 दुर्गा अष्टमी / महानवमी",
+
+    "2026-10-20":
+      "🚩 विजयादशमी / दशहरा",
+
+    "2026-10-25":
+      "🌕 शरद पूर्णिमा",
+
+    "2026-10-29":
+      "💐 करवा चौथ"
+  };
+
+  return festivals[key] || "आज का विशेष Festival";
+}
+
+function getVideos(){
+
+  const d = new Date();
+
+  const dailyNumber =
+    d.getDate() + d.getMonth()*31;
+
+  const morningMessages = [
+    "नई सुबह नई उम्मीद लेकर आई है ❤️",
+    "आज का दिन खुशियों से भर जाए 🌸",
+    "आपका आज का दिन शुभ और सुंदर हो 🙏",
+    "हर सुबह नई शुरुआत का संदेश देती है 🌅"
+  ];
+
+  const nightMessages = [
+    "शुभ रात्रि 🌙 मीठे सपनों के साथ सोइए",
+    "दिन की सारी चिंता छोड़कर मुस्कुराइए ❤️",
+    "भगवान आपके परिवार को खुश रखें 🙏",
+    "कल का दिन आज से भी अच्छा हो 🌙"
+  ];
+
+  const suvichar = [
+    "अच्छे विचार जीवन को सुंदर बना देते हैं।",
+    "मेहनत कभी व्यर्थ नहीं जाती।",
+    "समय की कदर करने वाला व्यक्ति आगे बढ़ता है।",
+    "मुस्कान छोटी है लेकिन असर बड़ा करती है।"
+  ];
+
+  return [
+
+    {
+      type:"Good Morning",
+      title:"🌅 Good Morning",
+      text:morningMessages[dailyNumber % morningMessages.length],
+      emoji:"🌅",
+      color:"linear-gradient(135deg,#ff9966,#ff5e62)"
+    },
+
+    {
+      type:"Good Night",
+      title:"🌙 Good Night",
+      text:nightMessages[dailyNumber % nightMessages.length],
+      emoji:"🌙",
+      color:"linear-gradient(135deg,#141e30,#243b55)"
+    },
+
+    {
+      type:"Devotional",
+      title:"🙏 आज की भक्ति",
+      text:"आज " + bhakti[d.getDay()] + " का विशेष संदेश",
+      emoji:"🙏",
+      color:"linear-gradient(135deg,#7b2ff7,#f107a3)"
+    },
+
+    {
+      type:"Suvichar",
+      title:"💭 आज का सुविचार",
+      text:suvichar[dailyNumber % suvichar.length],
+      emoji:"💭",
+      color:"linear-gradient(135deg,#11998e,#38ef7d)"
+    },
+
+    {
+      type:"Festival",
+      title:"🪔 Festival / Trending",
+      text:festivalToday(),
+      emoji:"🪔",
+      color:"linear-gradient(135deg,#f7971e,#ffd200)"
+    },
+
+    {
+      type:"Birthday",
+      title:"🎂 Birthday Status",
+      text:"जन्मदिन की ढेरों शुभकामनाएँ 🎉",
+      emoji:"🎂",
+      color:"linear-gradient(135deg,#ff416c,#ff4b2b)"
+    },
+
+    {
+      type:"Anniversary",
+      title:"💍 Anniversary Status",
+      text:"आप दोनों का साथ हमेशा खुशियों से भरा रहे ❤️",
+      emoji:"💍",
+      color:"linear-gradient(135deg,#8e2de2,#4a00e0)"
+    }
+
+  ];
+}
+
+function renderVideos(list){
+
+  const box = document.getElementById("videoList");
+
+  box.innerHTML = "";
+
+  if(list.length === 0){
+    box.innerHTML =
+      '<div class="empty">😔 कोई Status नहीं मिला।<br>दूसरा शब्द search करें।</div>';
+    return;
+  }
+
+  list.forEach((video,index)=>{
+
+    const card = document.createElement("div");
+    card.className = "video-card";
+
+    card.innerHTML = `
+
+      <div class="preview"
+           style="background:${video.color}">
+
+        <div style="font-size:60px">
+          ${video.emoji}
+        </div>
+
+        <h2>${video.text}</h2>
+
+        <p>${video.title}</p>
+
+        <div class="profile">
+
+          <img src="${profile.photo}"
+               alt="Profile">
+
+          <div class="profile-name">
+            ${profile.name}
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card-body">
+
+        <div class="card-title">
+          ${video.title}
+        </div>
+
+        <div class="card-desc">
+          आज के लिए खास Status
+        </div>
+
+        <div class="buttons">
+
+          <button class="watch"
+             onclick="watchVideo('${encodeURIComponent(video.title)}')">
+             ▶️ Video देखें
+          </button>
+
+          <button class="share"
+             onclick="shareVideo(${index})">
+             📤 Share
+          </button>
+
+          <button class="share"
+             onclick="shareWhatsApp(${index})">
+             🟢 WhatsApp
+          </button>
+
+          <button class="share"
+             onclick="shareFacebook()">
+             🔵 Facebook
+          </button>
+
+        </div>
+
+      </div>
+    `;
+
+    box.appendChild(card);
+
+  });
+}
+
+function setCategory(category,button){
+
+  currentCategory = category;
+
+  document.querySelectorAll(".cat")
+    .forEach(x=>x.classList.remove("active"));
+
+  button.classList.add("active");
+
+  filterVideos();
+}
+
+function filterVideos(){
+
+  const all = getVideos();
+
+  if(currentCategory === "All"){
+    renderVideos(all);
+    return;
+  }
+
+  renderVideos(
+    all.filter(x=>x.type === currentCategory)
+  );
+}
+
+function searchVideos(){
+
+  const word =
+    document.getElementById("search").value
+    .toLowerCase()
+    .trim();
+
+  let list = getVideos();
+
+  if(currentCategory !== "All"){
+    list = list.filter(
+      x=>x.type === currentCategory
+    );
+  }
+
+  if(word){
+    list = list.filter(x=>
+      (
+        x.type+" "+
+        x.title+" "+
+        x.text
+      ).toLowerCase().includes(word)
+    );
+  }
+
+  renderVideos(list);
+}
+
+function watchVideo(title){
+
+  const search =
+    decodeURIComponent(title);
+
+  const url =
+    "https://www.youtube.com/results?search_query="+
+    encodeURIComponent(
+      "Hindi status video "+search
+    );
+
+  window.open(url,"_blank");
+}
+
+function shareVideo(index){
+
+  const videos = getVideos();
+  const video = videos[index];
+
+  const text =
+    video.title+" - "+video.text+
+    "\n\nRozBolo ❤️";
+
+  if(navigator.share){
+
+    navigator.share({
+      title:video.title,
+      text:text,
+      url:location.href
+    }).catch(()=>{});
+
+  }else{
+
+    navigator.clipboard.writeText(
+      text+"\n"+location.href
+    );
+
+    alert("Share text copy हो गया ❤️");
+  }
+}
+
+function shareWhatsApp(index){
+
+  const video = getVideos()[index];
+
+  const text =
+    video.title+" - "+video.text+
+    "\n\nRozBolo ❤️";
+
+  window.open(
+    "https://wa.me/?text="+
+    encodeURIComponent(text+" "+location.href),
+    "_blank"
+  );
 }
 
 function shareFacebook(){
-  const url = "https://milo-122324.github.io/rozbolo/";
-  window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url), "_blank");
+
+  window.open(
+    "https://www.facebook.com/sharer/sharer.php?u="+
+    encodeURIComponent(location.href),
+    "_blank"
+  );
 }
 
-async function shareInstagram(){
-  const text = "RozBolo - Daily Status & Videos";
-  const url = "https://milo-122324.github.io/rozbolo/";
+function saveProfile(){
 
-  if(navigator.share){
-    await navigator.share({
-      title: "RozBolo",
-      text: text,
-      url: url
-    });
+  const name =
+    document.getElementById("nameInput").value.trim();
+
+  if(name){
+    profile.name = name;
+    localStorage.setItem("rozboloName",name);
   }
-}
 
-async function shareRozBolo(){
-  const text = "RozBolo - Daily Status & Videos";
-  const url = "https://milo-122324.github.io/rozbolo/";
+  const file =
+    document.getElementById("photoInput").files[0];
 
-  if(navigator.share){
-    await navigator.share({
-      title: "RozBolo",
-      text: text,
-      url: url
-    });
+  if(file){
+
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+
+      profile.photo = e.target.result;
+
+      localStorage.setItem(
+        "rozboloPhoto",
+        profile.photo
+      );
+
+      updateProfile();
+      filterVideos();
+    };
+
+    reader.readAsDataURL(file);
+
+  }else{
+
+    updateProfile();
+    filterVideos();
   }
+
+  alert("Profile Save हो गई ❤️");
 }
+
+function updateProfile(){
+
+  document.getElementById(
+    "profilePreview"
+  ).src = profile.photo;
+
+  document.getElementById(
+    "profileNamePreview"
+  ).innerText = profile.name;
+
+  document.getElementById(
+    "nameInput"
+  ).value = profile.name;
+}
+
+getToday();
+updateProfile();
+filterVideos();
+
 </script>
-  <div style="padding:20px 14px;text-align:center;">
-  <h3>📤 Share RozBolo</h3>
 
-  <button onclick="shareWhatsApp()" style="padding:12px;margin:4px;">
-    WhatsApp
-  </button>
-
-  <button onclick="shareFacebook()" style="padding:12px;margin:4px;">
-    Facebook
-  </button>
-
-  <button onclick="shareInstagram()" style="padding:12px;margin:4px;">
-    Instagram
-  </button>
-
-  <button onclick="shareRozBolo()" style="padding:12px;margin:4px;">
-    📤 Share
-  </button>
-  </div>
-<section style="padding:20px 14px;">
-  <h2 style="text-align:center;">🎬 Latest Videos</h2>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-
-    <div style="background:white;border-radius:15px;padding:10px;text-align:center;box-shadow:0 3px 12px #ddd;">
-      <div style="font-size:50px;">🌅</div>
-      <h3>Good Morning Video</h3>
-      <button onclick="window.open('https://www.youtube.com/results?search_query=good+morning+status','_blank')" style="padding:10px;border:0;border-radius:8px;background:#ff4757;color:white;">
-        ▶️ Video देखें
-      </button>
-    </div>
-
-    <div style="background:white;border-radius:15px;padding:10px;text-align:center;box-shadow:0 3px 12px #ddd;">
-      <div style="font-size:50px;">🌙</div>
-      <h3>Good Night Video</h3>
-      <button onclick="window.open('https://www.youtube.com/results?search_query=good+night+status','_blank')" style="padding:10px;border:0;border-radius:8px;background:#3742fa;color:white;">
-        ▶️ Video देखें
-      </button>
-    </div>
-
-    <div style="background:white;border-radius:15px;padding:10px;text-align:center;box-shadow:0 3px 12px #ddd;">
-      <div style="font-size:50px;">🙏</div>
-      <h3>Bhakti Video</h3>
-      <button onclick="window.open('https://www.youtube.com/results?search_query=bhakti+status+video','_blank')" style="padding:10px;border:0;border-radius:8px;background:#ff7f50;color:white;">
-        ▶️ Video देखें
-      </button>
-    </div>
-
-    <div style="background:white;border-radius:15px;padding:10px;text-align:center;box-shadow:0 3px 12px #ddd;">
-      <div style="font-size:50px;">🎉</div>
-      <h3>Festival Video</h3>
-      <button onclick="window.open('https://www.youtube.com/results?search_query=festival+status+video','_blank')" style="padding:10px;border:0;border-radius:8px;background:#9b59b6;color:white;">
-        ▶️ Video देखें
-      </button>
-    </div>
-
-  </div>
-</section>
 </body>
-  </html>
+</html>
