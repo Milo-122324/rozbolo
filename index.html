@@ -195,8 +195,8 @@ footer{
 <div class="title">✨ Today's Status</div>
 
 <section class="cards">
+<div class="card" onclick="openStatus('Good Morning','शुभ प्रभात आपका दिन शुभ हो')">
 
-  <div class="card">
     <div class="preview morning">
       🌅<br>
       शुभ प्रभात<br>
@@ -208,7 +208,7 @@ footer{
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openStatus('Good Night','शुभ रात्री मीठे सपने')">
     <div class="preview night">
       🌙<br>
       शुभ रात्रि<br>
@@ -220,7 +220,7 @@ footer{
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openStatus('Bhakti','जय श्री राम शुभ दिन')">
     <div class="preview bhakti">
       🙏<br>
       जय श्री राम<br>
@@ -232,7 +232,7 @@ footer{
     </div>
   </div>
 
-  <div class="card">
+  <div class="card" onclick="openStatus('Festival','शुभकामनाएँ खुशियाँ बाँटे')">
     <div class="preview festival">
       🎉<br>
       शुभकामनाएँ<br>
@@ -313,5 +313,24 @@ async function shareRozBolo(){
   }
 }
 </script>
+  <div style="padding:20px 14px;text-align:center;">
+  <h3>📤 Share RozBolo</h3>
+
+  <button onclick="shareWhatsApp()" style="padding:12px;margin:4px;">
+    WhatsApp
+  </button>
+
+  <button onclick="shareFacebook()" style="padding:12px;margin:4px;">
+    Facebook
+  </button>
+
+  <button onclick="shareInstagram()" style="padding:12px;margin:4px;">
+    Instagram
+  </button>
+
+  <button onclick="shareRozBolo()" style="padding:12px;margin:4px;">
+    📤 Share
+  </button>
+  </div>
 </body>
   </html>
