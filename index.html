@@ -255,6 +255,63 @@ function showMessage(name){
   alert(name + " category जल्द उपलब्ध होगी ❤️");
 }
 </script>
+<div style="padding:20px 14px;text-align:center;">
+  <h3>📤 Share RozBolo</h3>
 
+  <button onclick="shareWhatsApp()" style="padding:12px;margin:4px;border:0;border-radius:10px;background:#25D366;color:white;">
+    WhatsApp
+  </button>
+
+  <button onclick="shareFacebook()" style="padding:12px;margin:4px;border:0;border-radius:10px;background:#1877F2;color:white;">
+    Facebook
+  </button>
+
+  <button onclick="shareInstagram()" style="padding:12px;margin:4px;border:0;border-radius:10px;background:#E1306C;color:white;">
+    Instagram
+  </button>
+
+  <button onclick="shareRozBolo()" style="padding:12px;margin:4px;border:0;border-radius:10px;background:#333;color:white;">
+    📤 Share
+  </button>
+</div>
+
+<script>
+function shareWhatsApp(){
+  const text = "RozBolo - Daily Status & Videos";
+  const url = "https://milo-122324.github.io/rozbolo/";
+  window.open("https://wa.me/?text=" + encodeURIComponent(text + "\n" + url), "_blank");
+}
+
+function shareFacebook(){
+  const url = "https://milo-122324.github.io/rozbolo/";
+  window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url), "_blank");
+}
+
+async function shareInstagram(){
+  const text = "RozBolo - Daily Status & Videos";
+  const url = "https://milo-122324.github.io/rozbolo/";
+
+  if(navigator.share){
+    await navigator.share({
+      title: "RozBolo",
+      text: text,
+      url: url
+    });
+  }
+}
+
+async function shareRozBolo(){
+  const text = "RozBolo - Daily Status & Videos";
+  const url = "https://milo-122324.github.io/rozbolo/";
+
+  if(navigator.share){
+    await navigator.share({
+      title: "RozBolo",
+      text: text,
+      url: url
+    });
+  }
+}
+</script>
 </body>
   </html>
