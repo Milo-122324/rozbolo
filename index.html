@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RozBolo - Daily Status & Videos</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#f7f7fb;
+  color:#222;
+}
+
+header{
+  background:linear-gradient(135deg,#ff6b35,#ff3d81);
+  color:white;
+  padding:22px 18px 28px;
+  border-radius:0 0 25px 25px;
+}
+
+.logo{
+  font-size:30px;
+  font-weight:800;
+}
+
+.tagline{
+  margin-top:5px;
+  opacity:.9;
+  font-size:14px;
+}
+
+.search{
+  margin-top:18px;
+  background:white;
+  border-radius:14px;
+  padding:13px 15px;
+  color:#888;
+}
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  padding:18px 14px;
+}
+
+.category{
+  background:white;
+  border-radius:16px;
+  padding:15px 5px;
+  text-align:center;
+  box-shadow:0 3px 12px rgba(0,0,0,.07);
+  cursor:pointer;
+  transition:.2s;
+}
+
+.category:active{
+  transform:scale(.95);
+}
+
+.icon{
+  font-size:27px;
+  display:block;
+  margin-bottom:7px;
+}
+
+.category span:last-child{
+  font-size:13px;
+  font-weight:600;
+}
+
+.title{
+  padding:5px 16px 12px;
+  font-size:21px;
+  font-weight:700;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  padding:0 14px 30px;
+}
+
+.card{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 3px 14px rgba(0,0,0,.08);
+}
+
+.preview{
+  height:170px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:15px;
+  color:white;
+  font-size:19px;
+  font-weight:bold;
+}
+
+.morning{
+  background:linear-gradient(135deg,#ffb347,#ffcc33);
+}
+
+.night{
+  background:linear-gradient(135deg,#312e81,#111827);
+}
+
+.bhakti{
+  background:linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.festival{
+  background:linear-gradient(135deg,#7c3aed,#ec4899);
+}
+
+.card-content{
+  padding:12px;
+}
+
+.card-content h3{
+  font-size:15px;
+  margin-bottom:5px;
+}
+
+.card-content p{
+  color:#777;
+  font-size:12px;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  color:#888;
+  font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">RozBolo</div>
+  <div class="tagline">Daily Status & Videos</div>
+
+  <div class="search">
+    🔍 Search status, bhakti, festival...
+  </div>
+</header>
+
+<section class="categories">
+
+  <div class="category" onclick="showMessage('Good Morning')">
+    <span class="icon">🌅</span>
+    <span>Good Morning</span>
+  </div>
+
+  <div class="category" onclick="showMessage('Good Night')">
+    <span class="icon">🌙</span>
+    <span>Good Night</span>
+  </div>
+
+  <div class="category" onclick="showMessage('Bhakti')">
+    <span class="icon">🙏</span>
+    <span>Bhakti</span>
+  </div>
+
+  <div class="category" onclick="showMessage('Festival')">
+    <span class="icon">🎉</span>
+    <span>Festival</span>
+  </div>
+
+  <div class="category" onclick="showMessage('Suvichar')">
+    <span class="icon">💭</span>
+    <span>Suvichar</span>
+  </div>
+
+  <div class="category" onclick="showMessage('Birthday')">
+    <span class="icon">🎂</span>
+    <span>Birthday</span>
+  </div>
+
+</section>
+
+<div class="title">✨ Today's Status</div>
+
+<section class="cards">
+
+  <div class="card">
+    <div class="preview morning">
+      🌅<br>
+      शुभ प्रभात<br>
+      आपका दिन शुभ हो
+    </div>
+    <div class="card-content">
+      <h3>Good Morning</h3>
+      <p>सुंदर सुबह की शुभकामना</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview night">
+      🌙<br>
+      शुभ रात्रि<br>
+      मीठे सपने
+    </div>
+    <div class="card-content">
+      <h3>Good Night</h3>
+      <p>अपनों को भेजें शुभ रात्रि</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview bhakti">
+      🙏<br>
+      जय श्री राम<br>
+      शुभ दिन
+    </div>
+    <div class="card-content">
+      <h3>Bhakti</h3>
+      <p>भक्ति और आस्था के status</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="preview festival">
+      🎉<br>
+      शुभकामनाएँ<br>
+      खुशियाँ बाँटें
+    </div>
+    <div class="card-content">
+      <h3>Festival</h3>
+      <p>त्योहारों के सुंदर status</p>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 RozBolo • Daily Status & Videos
+</footer>
+
+<script>
+function showMessage(name){
+  alert(name + " category जल्द उपलब्ध होगी ❤️");
+}
+</script>
+
+</body>
+  </html>
